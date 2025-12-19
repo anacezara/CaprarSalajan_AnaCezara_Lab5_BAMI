@@ -12,7 +12,7 @@ namespace CaprarSalajan_AnaCezara_Lab5.Controllers
         {
             _riskService = riskService;
         }
-        // GET: /RiskPrediction/Index
+        // GET: /RiskPrediction/Inde
         [HttpGet]
         public IActionResult Index()
         {
