@@ -1,0 +1,28 @@
+﻿@model CaprarSalajan_AnaCezara_Lab5.Models.RiskPredictionViewModel
+
+<h2>Risk Prediction</h2>
+
+<form asp-action="Index" method="post">
+
+    <div>
+        <label>Inspection Type</label><br />
+        <input asp-for="InspectionType" class="form-control" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Violation Description</label><br />
+        <textarea asp-for="ViolationDescription" class="form-control"></textarea>
+    </div>
+
+    <br />
+
+    <button type="submit">Predict</button>
+</form>
+
+@if (Model != null && !string.IsNullOrEmpty(Model.PredictedRisk))
+{
+    <hr />
+    <h3>Predicted Risk: @Model.PredictedRisk</h3>
+}
